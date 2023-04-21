@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <h1>Shipping Label Creator</h1>
+    <p>
+      You will be creating an app that a shipper might use to generate
+      hypothetical shipping label for the FormationPost courier service. This
+      project doesn’t generate real labels and shouldn’t use any UPS, FedEx,
+      etc... APIs. It is just an exercise in building forms to accept user
+      input, and rendering a UI meeting more stringent requirements of this
+      hypothetical shipping label. Read the features carefully.
+    </p>
+    <h2>Mocks</h2>
+
+    Here’s an example of what the page might look like:<br />
+    <img
+      src="https://codaio.imgix.net/docs/CCsAkrAoaJ/blobs/bl-0e_Bpg0Vkw/cadae699e8d1abab4bda49bab2c43ae91c133e62d6d21ab6f824e6021d50ebf5086c00c9b1da08a584368b193d788ebca79f4ed342e513634e621f7de3ce85f5e64825bcbb29ce8be30a74da614d40f6c998956d3b54ae68d83651cb17588c9b38948d98?auto=format%2Ccompress&fit=max&lossless=true"
+      width="300"
+    />
+    <h2>Guide</h2>
+    <ol>
+      <li>
+        <b>Plan your Components</b><br />Identify which components you need, as
+        well as the props and state for those components.
+      </li>
+      <li>
+        <b>Create the Forms</b><br />Create a form component to accept the
+        sender information. Make sure your state doesn’t get too complicated
+        when storing all this data: 1. Name 2. Address (street, city, state, zip
+        code). You should store these fields in individual components. Reuse the
+        form to accept the recipient information.
+      </li>
+      <li>
+        <b>Create the UUID</b><br />Generate a unique shipping tracking number
+        based on a UUID. If you are not familiar with UUIDs don’t worry! Try to
+        find libraries on npm to get the results needed, and research more later
+        about how they work. <br />1. Generate a UUID in V4 format using a
+        library on npm to help. e.g. 123e4567-e89b-12d3-a456-426614174000<br />2.
+        Convert the UUID to base64 format using a library on npm to help e.g.
+        convert cdaed56d-8712-414d-b346-01905d0026fe to za7VbYcSQU2zRgGQXQAm/g==
+        <br />3. Use the resulting string as the ‘tracking number’
+      </li>
+      <li>
+        <b>Render the Shipping Label</b><br />Render a shipping label containing
+        all of this information as show in the mocks above. 1. Use a library on
+        npm to render the QR Code. The QR code should be generated directly from
+        the string tracking number created in step 3. 2. It’s important that the
+        label look exactly like the mock or the label might be rejected from
+        FormationPost.
+      </li>
+    </ol>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
